@@ -21,4 +21,4 @@ jobs:
       uses: docker/build-push-action@v5
       with:
         push: true
-        tags: ku2972000/price-dashboard:latestS
+        tags: ku2972000/price-dashboard:latest
