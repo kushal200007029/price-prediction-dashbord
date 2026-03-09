@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-webapp
+  name: price-dashboard
+
 spec:
   replicas: 3
 
   selector:
     matchLabels:
-      app: webapp
+      app: price-dashboard
 
   template:
     metadata:
       labels:
-        app: webapp
+        app: price-dashboard
 
     spec:
       containers:
-      - name: webapp-container
-        image: nginx
+      - name: price-dashboard
+        image: YOUR_DOCKER_USERNAME/price-dashboard:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8501
